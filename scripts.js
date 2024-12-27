@@ -20,43 +20,23 @@ const images = [
     "images/img19.jpg",
     "images/img20.jpg",
 ];
-// Create a shuffled copy of the images array
-let shuffledImages = [];
-let currentIndex = 0;
 
-// Function to shuffle an array
-function shuffleArray(array) {
-    return array.sort(() => Math.random() - 0.5);
+// Get the image element and button
+const randomImageElement = document.getElementById("random-image");
+const randomButton = document.getElementById("random-button");
+
+// Function to display a random image
+function showRandomImage() {
+    const randomIndex = Math.floor(Math.random() * images.length);
+    randomImageElement.src = images[randomIndex];
 }
 
-// Function to display the next image
-function showNextImage() {
-    // Get the image element
-    const randomImageElement = document.getElementById("random-image");
-
-    // If all images have been shown, reshuffle the list
-    if (currentIndex >= shuffledImages.length) {
-        shuffledImages = shuffleArray([...images]);
-        currentIndex = 0;
-    }
-
-    // Set the image source to the next image in the list
-    randomImageElement.src = shuffledImages[currentIndex];
-    currentIndex++;
-}
-
-// Set up error handling for broken images
-document.getElementById("random-image").onerror = function() {
-    this.src = "fallback-image.jpg";  // Fallback image if the image is not found
-    console.error("Image not found: " + this.src);
-};
-
-// Initialize the shuffled images and set the first image
-shuffledImages = shuffleArray([...images]);
-showNextImage();
+// Set an initial random image
+showRandomImage();
 
 // Add event listener to the button
-document.getElementById("random-button").addEventListener("click", showNextImage);
+randomButton.addEventListener("click", showRandomImage);
+
 
 // Disable right-click on images
 document.querySelectorAll('img').forEach(img => {

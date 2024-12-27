@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pictures</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="Banner.png" alt="My Logo">
+        </a>
+    </header>
+    <main>
+        <h1>Pictures</h1>
+        <p>Here are some of my favorite pictures:</p>
+        <img src="images/IMG_4420.jpg" alt="Picture 1">
+        <img src="images/IMG_7083.jpg" alt="Picture 2">
+        <img src="images/IMG_7131.jpg" alt="Picture 3">
+        <!-- Add more pictures as needed -->
+    </main>
+    <script>
+        document.addEventListener("contextmenu", function (e) {
+            if (e.target.tagName === "IMG") {
+                e.preventDefault();
+            }
+        });
+    </script>    
+</body>
+</html>

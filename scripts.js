@@ -57,3 +57,12 @@ showNextImage();
 
 // Add event listener to the button
 document.getElementById("random-button").addEventListener("click", showNextImage);
+
+// Disable right-click on images
+document.querySelectorAll('img').forEach(img => {
+    img.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+        alert("Right-click is disabled on images.");
+    });
+});
+

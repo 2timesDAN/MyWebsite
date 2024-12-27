@@ -126,3 +126,11 @@ input, textarea, button {
 #random-button:hover {
     background-color: #0056b3;
 }
+
+/* Prevent image dragging */
+img {
+    -webkit-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+}

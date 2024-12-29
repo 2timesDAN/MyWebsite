@@ -134,3 +134,58 @@ img {
     -o-user-drag: none;
     user-drag: none;
 }
+
+/* Puzzle */
+/* Puzzle Section Styles */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px; /* Add space below h1 */
+}
+
+p {
+    margin-bottom: 15px; /* Add space below each <p> */
+}
+
+/* Puzzle Answer Input */
+#puzzle-answer {
+    padding: 10px;
+    font-size: 16px;
+    width: 250px;
+    margin-right: 10px;
+    margin-bottom: 20px; /* Add space below the input */
+}
+
+/* Submit Button */
+#submit-answer {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#submit-answer:hover {
+    background-color: #218838;
+}
+
+/* Response Message */
+#response-message {
+    margin-top: 20px;
+}
+
+/* Error Message */
+#error-message {
+    margin-top: 20px;
+    color: red;
+}
+
+/* Video Container */
+#video-container {
+    margin-top: 20px;
+}

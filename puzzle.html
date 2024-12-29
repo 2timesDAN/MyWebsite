@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle Page</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Add your CSS file -->
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="Banner.png" alt="Logo">
+        </a>
+    </header>
+    <main>
+        <h1>Unlock</h1>
+        <p>In order to gain access to one of my original pieces of art, solve the question below.</p>
+        <p>Solve for access:</p>
+        <p>One of the photos on my pictures page shows a hatch with a bunch of locks. In which city was this picture taken?</p>
+
+        <input type="text" id="puzzle-answer" placeholder="Enter your answer">
+        <button id="submit-answer">Submit</button>
+
+        <p id="response-message" style="display: none; color: green;">Correct! Here is your prize:</p>
+        <p id="error-message" style="display: none; color: red;">Incorrect! Try again.</p>
+
+        <div id="video-container" style="display: none; margin-top: 20px;">
+            <iframe 
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/Rjb-hoYg0xQ" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </main>
+
+    <script>
+        // References to HTML elements
+        const puzzleAnswer = document.getElementById("puzzle-answer");
+        const submitAnswer = document.getElementById("submit-answer");
+        const responseMessage = document.getElementById("response-message");
+        const errorMessage = document.getElementById("error-message");
+        const videoContainer = document.getElementById("video-container");
+
+        // Function to check the answer and display the result
+        function checkAnswer() {
+            const answer = puzzleAnswer.value.trim().toLowerCase(); // Get user input and make it lowercase
+            if (answer === "bologna") { // Check if answer is correct
+                responseMessage.style.display = "block"; // Show success message
+                errorMessage.style.display = "none"; // Hide error message
+                videoContainer.style.display = "block"; // Show video
+            } else {
+                errorMessage.style.display = "block"; // Show error message
+                responseMessage.style.display = "none"; // Hide success message
+                videoContainer.style.display = "none"; // Hide video
+            }
+        }
+
+        // Event listener for button click
+        submitAnswer.addEventListener("click", checkAnswer);
+
+        // Event listener for pressing Enter key
+        puzzleAnswer.addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+                checkAnswer(); // Call the function to check the answer when Enter is pressed
+            }
+        });
+    </script>
+</body>
+</html>

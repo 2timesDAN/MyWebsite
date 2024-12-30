@@ -36,6 +36,9 @@
         </div>
     </main>
 
+    <!-- Add CryptoJS library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+
     <script>
         // References to HTML elements
         const puzzleAnswer = document.getElementById("puzzle-answer");
@@ -44,10 +47,15 @@
         const errorMessage = document.getElementById("error-message");
         const videoContainer = document.getElementById("video-container");
 
+        // Precomputed hash of the correct answer ("XXXXX")
+        const correctHash = "b7827ac08e1eaeec4a7db6b6dd0c249a";
+
         // Function to check the answer and display the result
         function checkAnswer() {
-            const answer = puzzleAnswer.value.trim().toLowerCase(); // Get user input and make it lowercase
-            if (answer === "bologna") { // Check if answer is correct
+            const userInput = puzzleAnswer.value.trim().toLowerCase(); // Normalize user input
+            const userHash = CryptoJS.MD5(userInput).toString(); // Hash the user input
+
+            if (userHash === correctHash) { // Compare hashed input with precomputed hash
                 responseMessage.style.display = "block"; // Show success message
                 errorMessage.style.display = "none"; // Hide error message
                 videoContainer.style.display = "block"; // Show video

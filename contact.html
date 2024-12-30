@@ -16,12 +16,39 @@
     <main>
         <h1>Contact Me</h1>
         <p>Feel free to send me an email about anything using the form below:</p>
-        <form action="mailto:2timesdan@gmail.com" method="post" enctype="text/plain">
+        <form id="contact-form" action="mailto:2timesdan@gmail.com" method="post" enctype="text/plain">
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
             <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
             <button type="submit">Send</button>
         </form>
+        <p id="confirmation-message" style="display: none; color: green;">Thank you! Your message is almost on its way! Please complete the process in your email app.</p>
     </main>
+
+    <script>
+        // References to the form and confirmation message
+        const contactForm = document.getElementById("contact-form");
+        const confirmationMessage = document.getElementById("confirmation-message");
+
+        // Event listener for form submission
+        contactForm.addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Show the confirmation message
+            confirmationMessage.style.display = "block";
+
+            // Hide the form
+            contactForm.style.display = "none";
+
+            // Optionally, open the user's default mail client
+            const formData = new FormData(contactForm);
+            const name = formData.get("name");
+            const email = formData.get("email");
+            const message = formData.get("message");
+
+            const mailtoLink = `mailto:2timesdan@gmail.com?subject=Message from ${encodeURIComponent(name)}&body=${encodeURIComponent(message)}`;
+            window.location.href = mailtoLink;
+        });
+    </script>
 </body>
 </html>

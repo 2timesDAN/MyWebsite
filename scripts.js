@@ -19,6 +19,7 @@ const images = [
     "images/img17.jpg",
     "images/img19.jpg",
     "images/img20.jpg",
+    "images/img21.jpg",
 ];
 
 // Get the image element and button

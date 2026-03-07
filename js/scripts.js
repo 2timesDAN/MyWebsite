@@ -47,29 +47,51 @@ const galleries = {
 
 japan:[
 "images/japan/1.JPEG",
-"images/japan/2.JPEG"
+"images/japan/2.JPEG",
+"images/japan/3.JPEG",
+"images/japan/4.JPEG",
+"images/japan/5.JPEG",
+"images/japan/6.JPEG",
+"images/japan/7.JPEG"
 ],
 
 italy:[
 "images/italy/1.jpg",
-"images/italy/2.jpeg"
+"images/italy/2.jpeg",
+"images/italy/3.jpg",
+"images/italy/4.jpg"
 ],
 
 usa:[
 "images/usa/1.jpg",
-"images/usa/2.jpg"
+"images/usa/2.jpg",
+"images/usa/3.jpeg",
+"images/usa/4.jpeg",
+"images/usa/5.jpeg",
+"images/usa/6.jpeg",
+"images/usa/7.jpeg",
+"images/usa/8.jpeg",
 ],
 
 france:[
-"images/france/1.jpg"
+"images/france/1.jpg",
+"images/france/2.jpeg",
+"images/france/3.jpeg",
+"images/france/4.jpg",
 ],
 
 greece:[
-"images/greece/1.jpg"
+"images/greece/1.jpg",
+"images/greece/2.jpg",
+"images/greece/3.jpg",
+"images/greece/4.jpg"
 ],
 
 brazil:[
-"images/brazil/1.JPEG"
+"images/brazil/1.JPEG",
+"images/brazil/2.JPEG",
+"images/brazil/3.JPEG",
+"images/brazil/4.JPEG",
 ]
 
 };
@@ -89,6 +111,5 @@ image.src=img;
 container.appendChild(image);
 
 });
-
 
 }

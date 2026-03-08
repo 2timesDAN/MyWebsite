@@ -46,13 +46,13 @@ document.getElementById("tipExtra").innerHTML = tip.extra;
 const galleries = {
 
 japan:[
-"images/japan/1.JPEG",
-"images/japan/2.JPEG",
-"images/japan/3.JPEG",
-"images/japan/4.JPEG",
-"images/japan/5.JPEG",
-"images/japan/6.JPEG",
-"images/japan/7.JPEG"
+"images/japan/1.jpeg",
+"images/japan/2.jpeg",
+"images/japan/3.jpeg",
+"images/japan/4.jpeg",
+"images/japan/5.jpeg",
+"images/japan/6.jpeg",
+"images/japan/7.jpeg"
 ],
 
 italy:[
@@ -88,10 +88,10 @@ greece:[
 ],
 
 brazil:[
-"images/brazil/1.JPEG",
-"images/brazil/2.JPEG",
-"images/brazil/3.JPEG",
-"images/brazil/4.JPEG",
+"images/brazil/1.jpeg",
+"images/brazil/2.jpeg",
+"images/brazil/3.jpeg",
+"images/brazil/4.jpeg",
 ]
 
 };
